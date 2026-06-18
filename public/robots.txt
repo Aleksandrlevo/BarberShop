@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aleksandrlevo.github.io/BarberShop/sitemap.xml
+Host: https://aleksandrlevo.github.io/BarberShop
