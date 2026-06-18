@@ -142,7 +142,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
-          <p>© {new Date().getFullYear()} Барбершоп «Классика». Все права защищены.</p>
+          <p>© {new Date().getFullYear()} Барбершоп «Классика». ИНН: 860323896497. Все права защищены.</p>
           <div className="flex items-center gap-4">
             <a
               href="/privacy-policy"
