@@ -142,6 +142,7 @@ export default function Offer({ onBack }: OfferProps) {
             </h2>
             <p className="mb-1">Барбершоп «Классика»</p>
             <p className="mb-1">ИНН: 860323896497</p>
+            <p className="mb-1">ОГРНИП: 326861700011711</p>
             <p className="mb-1">Краснодар, Ростовское шоссе, 30/7к1</p>
             <p className="mb-1">Телефон: <a href="tel:+79181280865" className="text-dark-900 underline underline-offset-2">+7 (918) 128-08-65</a></p>
             <p>Telegram: <a href="https://t.me/classic_br" target="_blank" rel="noopener noreferrer" className="text-dark-900 underline underline-offset-2">@classic_br</a></p>
