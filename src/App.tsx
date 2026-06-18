@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SmoothScroll from "./components/SmoothScroll";
 import ScrollToTop from "./components/ScrollToTop";
 import Modal from "./components/Modal";
 import CookieConsent from "./components/CookieConsent";
@@ -96,23 +97,25 @@ function App() {
         <meta property="og:locale" content="ru_RU" />
       </Helmet>
 
-      <div className="min-h-screen bg-light">
-        <Navbar />
-        <main>
-          <Hero />
-          <About />
-          <Services />
-          <WhyUs />
-          <Process />
-          <Reviews />
-          <CTA />
-          <Contacts />
-        </main>
-        <Footer />
-        <ScrollToTop />
-        <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
-        <CookieConsent />
-      </div>
+      <SmoothScroll>
+        <div className="min-h-screen bg-light">
+          <Navbar />
+          <main>
+            <Hero />
+            <About />
+            <Services />
+            <WhyUs />
+            <Process />
+            <Reviews />
+            <CTA />
+            <Contacts />
+          </main>
+          <Footer />
+          <ScrollToTop />
+          <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+          <CookieConsent />
+        </div>
+      </SmoothScroll>
     </HelmetProvider>
   );
 }
