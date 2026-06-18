@@ -12,6 +12,11 @@ function handlePrivacyClick(e: React.MouseEvent) {
   window.dispatchEvent(new CustomEvent("navigate", { detail: "privacy-policy" }));
 }
 
+function handleOfferClick(e: React.MouseEvent) {
+  e.preventDefault();
+  window.dispatchEvent(new CustomEvent("navigate", { detail: "offer" }));
+}
+
 export default function Footer() {
   return (
     <footer className="bg-dark-900 text-white">
@@ -55,6 +60,15 @@ export default function Footer() {
                   className="text-sm text-white/50 hover:text-white transition-colors duration-300"
                 >
                   Политика конфиденциальности
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/offer"
+                  onClick={handleOfferClick}
+                  className="text-sm text-white/50 hover:text-white transition-colors duration-300"
+                >
+                  Договор-оферта
                 </a>
               </li>
             </ul>
@@ -136,6 +150,13 @@ export default function Footer() {
               className="hover:text-white transition-colors"
             >
               Политика конфиденциальности
+            </a>
+            <a
+              href="/offer"
+              onClick={handleOfferClick}
+              className="hover:text-white transition-colors"
+            >
+              Договор-оферта
             </a>
             <span className="hidden sm:inline">Краснодар</span>
           </div>

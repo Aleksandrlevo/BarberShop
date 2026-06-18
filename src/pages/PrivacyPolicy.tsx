@@ -24,7 +24,7 @@ export default function PrivacyPolicy({ onBack }: PrivacyPolicyProps) {
           Политика конфиденциальности
         </h1>
         <p className="text-xs text-dark-600 mb-10">
-          Последнее обновление: 3 июня 2026 г.
+          Последнее обновление: 18 июня 2026 г.
         </p>
 
         <div className="space-y-8 text-sm text-dark-600 leading-relaxed">
@@ -59,7 +59,8 @@ export default function PrivacyPolicy({ onBack }: PrivacyPolicyProps) {
               технические файлы cookie, необходимые для функционирования карты и
               обеспечения безопасности.
             </p>
-            <p>Сайт не использует системы аналитики (Яндекс.Метрика, Google Analytics) и рекламные пиксели.</p>
+            <p>Для сбора статистики посещаемости на Сайте используется Яндекс.Метрика (ООО «ЯНДЕКС»). Яндекс.Метрика собирает обезличенные данные о посещениях: тип браузера, устройство, источник перехода, время на сайте. Эти данные используются исключительно для анализа и улучшения качества услуг и не позволяют идентифицировать конкретного пользователя.</p>
+            <p className="mt-2">Вы можете отказаться от сбора данных Яндекс.Метрикой с помощью <a href="https://yandex.ru/support/metrica/general/opt-out.html" target="_blank" rel="noopener noreferrer" className="text-dark-900 underline underline-offset-2">официального расширения для браузера</a>.</p>
           </section>
 
           <section>

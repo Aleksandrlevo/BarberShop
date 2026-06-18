@@ -14,10 +14,11 @@ import Process from "./sections/Process";
 import CTA from "./sections/CTA";
 import Contacts from "./sections/Contacts";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Offer from "./pages/Offer";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [page, setPage] = useState<"main" | "privacy-policy">("main");
+  const [page, setPage] = useState<"main" | "privacy-policy" | "offer">("main");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,6 +32,10 @@ function App() {
     const handler = (e: CustomEvent) => {
       if (e.detail === "privacy-policy") {
         setPage("privacy-policy");
+        window.scrollTo(0, 0);
+      }
+      if (e.detail === "offer") {
+        setPage("offer");
         window.scrollTo(0, 0);
       }
     };
@@ -48,6 +53,20 @@ function App() {
           <meta name="robots" content="noindex, follow" />
         </Helmet>
         <PrivacyPolicy onBack={() => setPage("main")} />
+      </HelmetProvider>
+    );
+  }
+
+  if (page === "offer") {
+    return (
+      <HelmetProvider>
+        <Helmet>
+          <html lang="ru" />
+          <title>Договор-оферта — Классика</title>
+          <meta name="description" content="Договор-оферта барбершопа Классика в Краснодаре. Условия оказания услуг, порядок записи, оплаты и возврата." />
+          <meta name="robots" content="noindex, follow" />
+        </Helmet>
+        <Offer onBack={() => setPage("main")} />
       </HelmetProvider>
     );
   }
